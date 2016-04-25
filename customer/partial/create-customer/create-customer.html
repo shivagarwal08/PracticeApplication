@@ -1,4 +1,84 @@
-<div class="col-md-12">
+<div class="col-md-3">
+	<ul class="nav nav-pills nav-stacked">
+	  <li class="active"><a href="#">Customers</a></li>
+	  <li><a href="#">Create Customer</a></li>
+	  <li><a href="#">Edit Customer</a></li>
+	  <li><a href="#">Delete Customer</a></li>
+	</ul>
+</div> 
 
-create-custoemrs
+<div class="col-md-9">
+	<div class="page-header">
+		<h3>Add Customer Form</h3>
+	</div>
+
+	<div class="panel-group" id="accordion">
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+	        Collapsible Group 1</a>
+	      </h4>
+	    </div>
+	    <div id="collapse1" class="panel-collapse collapse in">
+	      <div class="panel-body">
+	      <form name="custForm" class="form form-horizontal" role="form" novalidate>
+			<div class="form-group">
+				<label class="control-label col-md-3" for="name">Name</label>
+				<div class="col-md-9">
+					<input class="form-control" type="text" name="name" ng-model="customer.name"  >
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-md-3" for="location">Location</label>
+				<div class="col-md-9">
+					<input class="form-control" type="text" name="location" ng-model="customer.location" >
+				</div>			
+			</div>
+
+			<div class="form-group">
+				<label class="control-label col-md-3" for="email">Email</label>
+				<div class="col-md-9">
+					<input class="form-control" type="email" ng-model="customer.email" name="email" required>
+					<p ng-show="submitted && custForm.email.$error.required === true">Email is required</p>	
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="col-md-9 col-md-offset-3">
+					<button class="btn btn-primary btn-block" type="button" ng-click="add();">Add</button>
+				</div>
+			</div>
+		</form>
+	      </div>
+	    </div>
+	  </div>
+  
+
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+	        Collapsible Group 2</a>
+	      </h4>
+	    </div>
+	    <div id="collapse2" class="panel-collapse collapse">
+	      <div class="panel-body"></div>
+	    </div>
+	  </div>
+
+
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+	        Collapsible Group 3</a>
+	      </h4>
+	    </div>
+	    <div id="collapse3" class="panel-collapse collapse">
+	      <div class="panel-body"></div>
+	    </div>
+	  </div>
+</div>
 </div>

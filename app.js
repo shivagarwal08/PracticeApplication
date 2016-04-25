@@ -3,7 +3,7 @@ angular.module('demoApp', ['ui.bootstrap', 'ui.router', 'ngAnimate', 'customer']
 angular.module('demoApp').config(function($stateProvider, $urlRouterProvider) {
 
     /* Add New States Above */
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/customers');
 
 });
 

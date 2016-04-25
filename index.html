@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <link href="app.less" type="text/css" rel="stylesheet/less">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
 </head>
 <body>
 
@@ -23,30 +25,60 @@
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <!-- <script src="bower_components/angular-ui-utils/ui-utils.js"></script> -->
+  <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+  <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/query-string/query-string.js"></script>
+  <script src="bower_components/angular-oauth2/dist/angular-oauth2.js"></script>
+  <!--  <script src="bower_components/angular-cache/dist/angular-cache.js"></script> -->
   <!-- Add New Bower Component JS Above -->
 
 
   <!-- Main App JS -->
   <script src="app.js"></script>
+ 
+  
   <script src="customer/customer.js"></script>
-  <script src="customer/partial/create-customer/create-customer.js"></script>
   <script src="customer/service/customer-service.js"></script>
   <script src="customer/partial/list-customer/list-customer.js"></script>
+  <script src="customer/partial/create-customer/create-customer.js"></script>  
+
+  <script src="login/login.js"></script>
+  <script src="login/partial/user/user.js"></script>
+  <script src="login/service/login-service.js"></script>
   <!-- Add New Component JS Above -->
-
-  <div>
-    <div id="content" class="container">
-      <div class="row">
-      
-      <div style="text-align:center;" >
-        <h2>AngualrJS applicaiton</h2>
-      </div>
-
-        <div ui-view>
+  
+  <div id="content" class="container">      
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+          <a class="navbar-brand" href="#">Demo Application</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a ui-sref="customers">Customers</a></li>
+            <li><a ui-sref="create-customer">Create Customer</a></li> 
+            <li><a href="#">Page 3</a></li> 
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
         </div>
       </div>
+    </nav>
+
+    <div class="row">
+      <div ui-view></div>
     </div>
-  </div>
+    
+  </div>  
 
 </body>
 </html>

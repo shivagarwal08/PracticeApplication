@@ -23,6 +23,10 @@
       {
         "name": "customer",
         "file": "customer\\customer.js"
+      },
+      {
+        "name": "login",
+        "file": "login\\login.js"
       }
     ]
   }
